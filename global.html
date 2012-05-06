@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>global page</title>
+  <script type="text/javascript">
+  safari.application.addEventListener('message',function(e){
+    var autologinsettings = [];
+    autologinsettings[0] = safari.extension.secureSettings.mk1;
+    autologinsettings[1] = safari.extension.secureSettings.mk2;
+    autologinsettings[2] = safari.extension.secureSettings.mk3;
+    autologinsettings[3] = safari.extension.secureSettings.mk4;
+    autologinsettings[4] = safari.extension.secureSettings.mk5;
+    autologinsettings[5] = safari.extension.secureSettings.mk6;
+    autologinsettings[6] = safari.extension.secureSettings.mk7;
+    e.target.page.dispatchMessage('Response', autologinsettings);
+  }, false);
+
+  </script>
+</head>
+<body>
+</body>
+</html>
